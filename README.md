@@ -1,5 +1,6 @@
 # python-c
 [Chinese version](cn.md)
+ 
 Thanks for using python-c! 
 It is written for use c in python. 
 ## modules
@@ -7,7 +8,7 @@ It is written for use c in python.
 This module is a wrapper for MessageBox.
 example:
 ```python
-from MessageBox import MessageBox
+from MessageBox import *
 MessageBox("hallo","hallo world",mb_iconerror_,mb_ok)#mb_ok = MB_OK in C
 ```
 ### byte

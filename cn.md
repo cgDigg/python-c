@@ -5,7 +5,7 @@
 这是用以显示消息框的模块
 example:
 ```python
-from MessageBox import MessageBox
+from MessageBox import *
 MessageBox("hallo","hallo world",mb_iconerror_,mb_ok)#mb_ok同等于C语言的MB_OK
 ```
 ### byte
