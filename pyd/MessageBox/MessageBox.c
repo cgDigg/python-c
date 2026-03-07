@@ -1,19 +1,19 @@
 #include <Python.h>
 #include <windows.h>
 
-static PyObject* Py_MessageBox(char* title, char* message, int icon, int button) {
+static PyObject* Py_MessageBox(PyObject* self,char* title, char* message, int icon, int button) {
     if (title == NULL || message == NULL) {
         return 1;
     }
-    if (icon == NULL) {
-        if (button == NULL) {
+    if (icon == 0) {
+        if (button == 0) {
             MessageBox(NULL, message, title, MB_OK);
         } else {
             MessageBox(NULL, message, title, button);
         }
     }
     else {
-        if (button == NULL) {
+        if (button == 0) {
             MessageBox(NULL, message, title, icon);
         } else {
             MessageBox(NULL, message, title, icon | button);
