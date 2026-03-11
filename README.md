@@ -149,8 +149,38 @@ int strings_check(char* string1, char* string2);
 const char* string_add(char* string1, char* string2, int butter_size);
 void string_free(const char* str);
 ```
+### time
+a dll named time
+#### functions
+```functions
+    TIME_API struct tm get_utc_time(void);
+    TIME_API struct tm get_local_time(void);
+    TIME_API int get_current_year(void);
+    TIME_API int get_current_month(void);
+    TIME_API int get_current_day(void);
+    TIME_API int get_current_hour(void);
+    TIME_API int get_current_minute(void);
+    TIME_API int get_current_second(void);
+```
 
+### vlaue
+a dll named vlaue
+#### functions
+```functions
+VALUE_API List* create_list(void);
+VALUE_API void destroy_list(List* list);
 
+VALUE_API void list_push_back(List* list, const char* str);
+VALUE_API void list_push_front(List* list, const char* str);
+
+VALUE_API char* get_element_(List* list, int index);           
+VALUE_API int get_index_(List* list, const char* element);     
+
+ int check_list_(List* list);
+VALUE_API size_t list_size_(List* list);
+API int int_to_binary(uint64_t number, char* buffer, size_t buffer_size);
+API int binary_to_int(const char* binary_str, uint64_t* result);
+```
 ## license
 MIT License 
 
